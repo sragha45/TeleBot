@@ -9,8 +9,10 @@ def get_codeforces_contest_list(bot, job):
     :return: void
     """
     path = "data/contest_list.json"
+
     if not os.path.exists(os.path.dirname(path)):
         os.makedirs(os.path.dirname(path))
+
     with open("data/contest_list.json", "w+", encoding='utf-8') as f:
         response = urllib.request.urlopen("http://codeforces.com/api/contest.list").read()
         json_response = json.loads(response)
