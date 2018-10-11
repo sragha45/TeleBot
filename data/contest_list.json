@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1056,
+        "name": "Mail.Ru Cup 2018 Round 3",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 9000,
+        "startTimeSeconds": 1543163700,
+        "relativeTimeSeconds": -3879381
+    },
+    {
+        "id": 1032,
+        "name": "Technocup 2019 - Elimination Round 3",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1542557100,
+        "relativeTimeSeconds": -3272781
+    },
+    {
+        "id": 1050,
+        "name": "Технокубок 2019 - Ознакомительный Раунд 3",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 172800,
+        "startTimeSeconds": 1542380700,
+        "relativeTimeSeconds": -3096381
+    },
+    {
+        "id": 1062,
+        "name": "Codeforces Round #519 (div. 2)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1542209700,
+        "relativeTimeSeconds": -2925381
+    },
+    {
+        "id": 1055,
+        "name": "Mail.Ru Cup 2018 Round 2",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 9000,
+        "startTimeSeconds": 1541860500,
+        "relativeTimeSeconds": -2576181
+    },
+    {
+        "id": 1044,
+        "name": "Lyft Level 5 Challenge 2018 - Final Round",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1541354700,
+        "relativeTimeSeconds": -2070381
+    },
+    {
+        "id": 1043,
+        "name": "Codeforces Round #518 (Div. 1)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1540740900,
+        "relativeTimeSeconds": -1456581
+    },
+    {
+        "id": 1069,
+        "name": "Codeforces Round #518 (Div. 2)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1540740900,
+        "relativeTimeSeconds": -1456581
+    },
+    {
+        "id": 1067,
+        "name": "Codeforces Round #517 (Div. 1)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1540312500,
+        "relativeTimeSeconds": -1028181
+    },
+    {
+        "id": 1068,
+        "name": "Codeforces Round #517 (Div. 2)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1540312500,
+        "relativeTimeSeconds": -1028181
+    },
+    {
+        "id": 1031,
+        "name": "Technocup 2019 - Elimination Round 2",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1540109100,
+        "relativeTimeSeconds": -824781
+    },
+    {
+        "id": 1049,
+        "name": "Технокубок 2019 - Ознакомительный Раунд 2",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 172800,
+        "startTimeSeconds": 1539932700,
+        "relativeTimeSeconds": -648381
+    },
+    {
+        "id": 1054,
+        "name": "Mail.Ru Cup 2018 Round 1",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 9000,
+        "startTimeSeconds": 1539880500,
+        "relativeTimeSeconds": -596181
+    },
+    {
+        "id": 1063,
+        "name": "Codeforces Round #516 (Div. 1, by Moscow Team Olympiad)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1539511500,
+        "relativeTimeSeconds": -227181
+    },
+    {
+        "id": 1064,
+        "name": "Codeforces Round #516 (Div. 2, by Moscow Team Olympiad)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1539511500,
+        "relativeTimeSeconds": -227181
+    },
+    {
+        "id": 1066,
+        "name": "Codeforces Round #515 (Div. 3)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1539354900,
+        "relativeTimeSeconds": -70583
+    },
+    {
+        "id": 1057,
+        "name": "Mail.Ru Cup 2018 - Qualification Round",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 259200,
+        "startTimeSeconds": 1539335100,
+        "relativeTimeSeconds": -50781
+    },
+    {
+        "id": 1234,
+        "name": "Raghav",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 259200,
+        "startTimeSeconds": 1539310160,
+        "relativeTimeSeconds": -50781
+    }
+]

@@ -17,8 +17,5 @@ def get_codeforces_contest_list(bot, job):
         response = urllib.request.urlopen("http://codeforces.com/api/contest.list").read()
         json_response = json.loads(response)
         upcoming_contests = [x for x in json_response["result"] if x["phase"] == "BEFORE"]
-        print(upcoming_contests)
         f.write(json.dumps(upcoming_contests, ensure_ascii=False, indent=4))
-
-
 
