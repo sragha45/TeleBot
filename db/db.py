@@ -1,0 +1,29 @@
+import json
+from pathlib import Path
+
+path = Path("db/users_info.json")
+
+
+def add_user(user):
+    user = user.id
+    if path.is_file():
+        with open(path, "r+", encoding='utf-8') as f:
+            d = json.load(f)
+            if user not in d["users"]:
+                d["users"].append(user)
+            f.seek(0)
+            f.truncate()
+            json.dump(d, f)
+    else:
+        d = {"users": [user]}
+        with open(path, "w+", encoding='utf-8') as f:
+            json.dump(d, f)
+
+
+def get_users_list():
+    try:
+        with open(path, "r", encoding='utf-8') as f:
+            d = json.load(f)
+            return d["users"]
+    except FileNotFoundError:
+        return []

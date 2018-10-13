@@ -7,7 +7,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1543163700,
-        "relativeTimeSeconds": -3879381
+        "relativeTimeSeconds": -3706855
     },
     {
         "id": 1032,
@@ -17,7 +17,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542557100,
-        "relativeTimeSeconds": -3272781
+        "relativeTimeSeconds": -3100255
     },
     {
         "id": 1050,
@@ -27,7 +27,7 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1542380700,
-        "relativeTimeSeconds": -3096381
+        "relativeTimeSeconds": -2923854
     },
     {
         "id": 1062,
@@ -37,7 +37,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542209700,
-        "relativeTimeSeconds": -2925381
+        "relativeTimeSeconds": -2752855
     },
     {
         "id": 1055,
@@ -47,7 +47,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1541860500,
-        "relativeTimeSeconds": -2576181
+        "relativeTimeSeconds": -2403655
     },
     {
         "id": 1044,
@@ -57,7 +57,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1541354700,
-        "relativeTimeSeconds": -2070381
+        "relativeTimeSeconds": -1897855
     },
     {
         "id": 1043,
@@ -67,7 +67,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -1456581
+        "relativeTimeSeconds": -1284055
     },
     {
         "id": 1069,
@@ -77,7 +77,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -1456581
+        "relativeTimeSeconds": -1284055
     },
     {
         "id": 1067,
@@ -87,7 +87,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -1028181
+        "relativeTimeSeconds": -855655
     },
     {
         "id": 1068,
@@ -97,7 +97,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -1028181
+        "relativeTimeSeconds": -855655
     },
     {
         "id": 1031,
@@ -107,7 +107,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -824781
+        "relativeTimeSeconds": -652255
     },
     {
         "id": 1049,
@@ -117,7 +117,7 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1539932700,
-        "relativeTimeSeconds": -648381
+        "relativeTimeSeconds": -475854
     },
     {
         "id": 1054,
@@ -127,7 +127,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1539880500,
-        "relativeTimeSeconds": -596181
+        "relativeTimeSeconds": -423655
     },
     {
         "id": 1063,
@@ -137,7 +137,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1539511500,
-        "relativeTimeSeconds": -227181
+        "relativeTimeSeconds": -54655
     },
     {
         "id": 1064,
@@ -147,27 +147,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1539511500,
-        "relativeTimeSeconds": -227181
-    },
-    {
-        "id": 1066,
-        "name": "Codeforces Round #515 (Div. 3)",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 7200,
-        "startTimeSeconds": 1539354900,
-        "relativeTimeSeconds": -70583
-    },
-    {
-        "id": 1057,
-        "name": "Mail.Ru Cup 2018 - Qualification Round",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 259200,
-        "startTimeSeconds": 1539335100,
-        "relativeTimeSeconds": -50781
+        "relativeTimeSeconds": -54655
     },
     {
         "id": 1234,
@@ -175,8 +155,8 @@
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
-        "durationSeconds": 259200,
-        "startTimeSeconds": 1539310160,
-        "relativeTimeSeconds": -50781
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1539476818,
+        "relativeTimeSeconds": -54655
     }
 ]
