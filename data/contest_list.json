@@ -7,7 +7,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1543163700,
-        "relativeTimeSeconds": -3706855
+        "relativeTimeSeconds": -3456838
     },
     {
         "id": 1032,
@@ -17,7 +17,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542557100,
-        "relativeTimeSeconds": -3100255
+        "relativeTimeSeconds": -2850238
     },
     {
         "id": 1050,
@@ -27,7 +27,7 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1542380700,
-        "relativeTimeSeconds": -2923854
+        "relativeTimeSeconds": -2673838
     },
     {
         "id": 1062,
@@ -37,7 +37,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542209700,
-        "relativeTimeSeconds": -2752855
+        "relativeTimeSeconds": -2502838
     },
     {
         "id": 1055,
@@ -47,7 +47,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1541860500,
-        "relativeTimeSeconds": -2403655
+        "relativeTimeSeconds": -2153638
     },
     {
         "id": 1044,
@@ -57,7 +57,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1541354700,
-        "relativeTimeSeconds": -1897855
+        "relativeTimeSeconds": -1647838
     },
     {
         "id": 1043,
@@ -67,7 +67,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -1284055
+        "relativeTimeSeconds": -1034038
     },
     {
         "id": 1069,
@@ -77,27 +77,27 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -1284055
+        "relativeTimeSeconds": -1034038
     },
     {
         "id": 1067,
-        "name": "Codeforces Round #517 (Div. 1)",
+        "name": "Codeforces Round #517 (Div. 1) [Thanks, Mail.Ru!]",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -855655
+        "relativeTimeSeconds": -605638
     },
     {
         "id": 1068,
-        "name": "Codeforces Round #517 (Div. 2)",
+        "name": "Codeforces Round #517 (Div. 2) [Thanks, Mail.Ru!]",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -855655
+        "relativeTimeSeconds": -605638
     },
     {
         "id": 1031,
@@ -107,7 +107,17 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -652255
+        "relativeTimeSeconds": -402238
+    },
+    {
+        "id": 1070,
+        "name": "2018-2019 ICPC, NEERC, Southern Subregional Contest (Online Mirror, ACM-ICPC Rules, Teams Preferred)",
+        "type": "ICPC",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 18000,
+        "startTimeSeconds": 1540022700,
+        "relativeTimeSeconds": -315838
     },
     {
         "id": 1049,
@@ -117,7 +127,7 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1539932700,
-        "relativeTimeSeconds": -475854
+        "relativeTimeSeconds": -225838
     },
     {
         "id": 1054,
@@ -127,36 +137,6 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1539880500,
-        "relativeTimeSeconds": -423655
-    },
-    {
-        "id": 1063,
-        "name": "Codeforces Round #516 (Div. 1, by Moscow Team Olympiad)",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 7200,
-        "startTimeSeconds": 1539511500,
-        "relativeTimeSeconds": -54655
-    },
-    {
-        "id": 1064,
-        "name": "Codeforces Round #516 (Div. 2, by Moscow Team Olympiad)",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 7200,
-        "startTimeSeconds": 1539511500,
-        "relativeTimeSeconds": -54655
-    },
-    {
-        "id": 1234,
-        "name": "Raghav",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 7200,
-        "startTimeSeconds": 1539476818,
-        "relativeTimeSeconds": -54655
+        "relativeTimeSeconds": -173639
     }
 ]

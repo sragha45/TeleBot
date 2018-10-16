@@ -1,6 +1,9 @@
 from telegram.ext import Updater, CommandHandler
 import helper.codeforces as cg
+import logging
 from db import db
+
+
 # from datetime import datetime, time
 
 
@@ -12,6 +15,7 @@ class Bot:
 
     def add_handles(self):
         self.dispatcher.add_handler(CommandHandler('start', self.start_bot))
+        self.dispatcher.add_handler(CommandHandler('upcoming', self.upcoming))
 
     def __init__(self):
         self.TOKEN = "631877927:AAGJAVZo_GBz7Gmpq0HWOB8su-kK1i_CsLI"
@@ -34,7 +38,7 @@ class Bot:
             self.job_queue.run_once(self.alarm, when=x[0], context=x[1], name=x[1])
 
     def _3am_update_callback(self, bot=None, job=None):
-        # cg.get_codeforces_contest_list()
+        cg.write_codeforces_upcoming_contest_list()
         self.add_alarms()
 
     @staticmethod
@@ -43,3 +47,9 @@ class Bot:
         people = db.get_users_list()
         for person in people:
             bot.send_message(chat_id=person, text=message)
+
+    @staticmethod
+    def upcoming(bot, update):
+        res = cg.get_upcoming_contests()
+        update.message.reply_text(res)
+        logging.info(res)
