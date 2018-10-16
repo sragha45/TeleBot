@@ -51,5 +51,5 @@ class Bot:
     @staticmethod
     def upcoming(bot, update):
         res = cg.get_upcoming_contests()
-        update.message.reply_text(res)
         logging.info(res)
+        bot.send_message(chat_id=update.message.chat_id, text=res, parse_mode="HTML")

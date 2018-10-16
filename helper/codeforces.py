@@ -43,7 +43,7 @@ def get_upcoming_contests():
         contests.sort(key=lambda contest: -contest["relativeTimeSeconds"])
         for contest in contests:
             res = res + (
-                contest["name"] + "\n" +
+                "<a href='https://codeforces.com/contest/" + str(contest["id"]) + "'>" + contest["name"] + "</a>\n" +
                 "starts in " + str(timedelta(seconds=-contest["relativeTimeSeconds"])) + "\n"
             )
             res = res + "\n"
