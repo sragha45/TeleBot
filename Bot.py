@@ -16,7 +16,8 @@ class Bot:
     def add_handles(self):
         self.dispatcher.add_handler(CommandHandler('start', self.start_bot))
         self.dispatcher.add_handler(CommandHandler('upcoming', self.upcoming))
-        self.dispatcher.add_handler(CommandHandler("running", self.running))
+        self.dispatcher.add_handler(CommandHandler('running', self.running))
+        self.dispatcher.add_handler(CommandHandler('refresh', self.refresh))
 
     def __init__(self):
         self.TOKEN = "631877927:AAGJAVZo_GBz7Gmpq0HWOB8su-kK1i_CsLI"
@@ -58,3 +59,9 @@ class Bot:
     def running(bot, update):
         res = cg.get_running_contests()
         bot.send_message(chat_id=update.message.chat_id, text=res, parse_mode="HTML")
+
+    @staticmethod
+    def refresh(bot, update):
+        cg.write_codeforces_contest_list()
+        res = "Updating contest list... Please wait"
+        bot.send_message(chat_id=update.message.chat_id, text="res")
