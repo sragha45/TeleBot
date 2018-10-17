@@ -39,7 +39,7 @@ class Bot:
             self.job_queue.run_once(self.alarm, when=x[0], context=x[1], name=x[1])
 
     def _3am_update_callback(self, bot=None, job=None):
-        # cg.write_codeforces_contest_list()
+        cg.write_codeforces_contest_list()
         self.add_alarms()
 
     @staticmethod

@@ -45,11 +45,13 @@ def get_upcoming_contests():
         contests.sort(key=lambda contest: -contest["relativeTimeSeconds"])
         for contest in contests:
             res = res + (
-                    "<a href='https://codeforces.com/contest/" + str(contest["id"]) + "'>" + contest[
-                "name"] + "</a>\n" +
+                    "<a href='https://codeforces.com/contest/" + str(contest["id"]) + "'>" +
+                    contest["name"] + "</a>\n" +
                     "starts in " + str(timedelta(seconds=-contest["relativeTimeSeconds"])) + "\n"
             )
             res = res + "\n"
+        if not res:
+            res = "No upcoming contests"
     return res
 
 
@@ -65,4 +67,6 @@ def get_running_contests():
                     + str(contest["name"]) + "</a>\n"
             )
             res += "\n"
+        if not res:
+            res = "No running contests right now"
     return res
