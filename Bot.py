@@ -36,11 +36,13 @@ class Bot:
 
     def add_alarms(self):
         contest_list = cg.get_contest_time_and_id()
+        jobs = [x.name for x in self.job_queue.jobs()]
         for x in contest_list:
-            self.job_queue.run_once(self.alarm, when=x[0], context=x[1], name=x[1])
+            if x[1] not in jobs:
+                self.job_queue.run_once(self.alarm, when=x[0], context=x[1], name=x[1])
 
     def _3am_update_callback(self, bot=None, job=None):
-        cg.write_codeforces_contest_list()
+        # cg.write_codeforces_contest_list()
         self.add_alarms()
 
     @staticmethod
@@ -64,4 +66,4 @@ class Bot:
     def refresh(bot, update):
         cg.write_codeforces_contest_list()
         res = "Updating contest list... Please wait"
-        bot.send_message(chat_id=update.message.chat_id, text="res")
+        bot.send_message(chat_id=update.message.chat_id, text=res)
