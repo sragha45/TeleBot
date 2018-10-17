@@ -7,17 +7,17 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1543163700,
-        "relativeTimeSeconds": -3452833
+        "relativeTimeSeconds": -3417257
     },
     {
         "id": 1032,
         "name": "Technocup 2019 - Elimination Round 3",
         "type": "CF",
-        "phase": "BEFORE",
+        "phase": "RUNNING",
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542557100,
-        "relativeTimeSeconds": -2846233
+        "relativeTimeSeconds": -2810657
     },
     {
         "id": 1050,
@@ -27,7 +27,7 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1542380700,
-        "relativeTimeSeconds": -2669833
+        "relativeTimeSeconds": -2634257
     },
     {
         "id": 1062,
@@ -37,7 +37,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542209700,
-        "relativeTimeSeconds": -2498833
+        "relativeTimeSeconds": -2463257
     },
     {
         "id": 1055,
@@ -47,7 +47,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1541860500,
-        "relativeTimeSeconds": -2149633
+        "relativeTimeSeconds": -2114057
     },
     {
         "id": 1044,
@@ -57,7 +57,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1541354700,
-        "relativeTimeSeconds": -1643833
+        "relativeTimeSeconds": -1608257
     },
     {
         "id": 1043,
@@ -67,7 +67,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -1030033
+        "relativeTimeSeconds": -994457
     },
     {
         "id": 1069,
@@ -77,7 +77,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -1030033
+        "relativeTimeSeconds": -994457
     },
     {
         "id": 1067,
@@ -87,7 +87,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -601633
+        "relativeTimeSeconds": -566057
     },
     {
         "id": 1068,
@@ -97,7 +97,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -601633
+        "relativeTimeSeconds": -566057
     },
     {
         "id": 1031,
@@ -107,7 +107,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -398233
+        "relativeTimeSeconds": -362657
     },
     {
         "id": 1070,
@@ -117,7 +117,7 @@
         "frozen": false,
         "durationSeconds": 18000,
         "startTimeSeconds": 1540022700,
-        "relativeTimeSeconds": -311833
+        "relativeTimeSeconds": -276257
     },
     {
         "id": 1049,
@@ -127,7 +127,7 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1539932700,
-        "relativeTimeSeconds": -221833
+        "relativeTimeSeconds": -186257
     },
     {
         "id": 1054,
@@ -137,6 +137,6 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1539880500,
-        "relativeTimeSeconds": -169634
+        "relativeTimeSeconds": -134058
     }
 ]

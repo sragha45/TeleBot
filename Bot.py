@@ -16,6 +16,7 @@ class Bot:
     def add_handles(self):
         self.dispatcher.add_handler(CommandHandler('start', self.start_bot))
         self.dispatcher.add_handler(CommandHandler('upcoming', self.upcoming))
+        self.dispatcher.add_handler(CommandHandler("running", self.running))
 
     def __init__(self):
         self.TOKEN = "631877927:AAGJAVZo_GBz7Gmpq0HWOB8su-kK1i_CsLI"
@@ -38,7 +39,7 @@ class Bot:
             self.job_queue.run_once(self.alarm, when=x[0], context=x[1], name=x[1])
 
     def _3am_update_callback(self, bot=None, job=None):
-        cg.write_codeforces_upcoming_contest_list()
+        # cg.write_codeforces_contest_list()
         self.add_alarms()
 
     @staticmethod
@@ -51,5 +52,9 @@ class Bot:
     @staticmethod
     def upcoming(bot, update):
         res = cg.get_upcoming_contests()
-        logging.info(res)
+        bot.send_message(chat_id=update.message.chat_id, text=res, parse_mode="HTML")
+
+    @staticmethod
+    def running(bot, update):
+        res = cg.get_running_contests()
         bot.send_message(chat_id=update.message.chat_id, text=res, parse_mode="HTML")
