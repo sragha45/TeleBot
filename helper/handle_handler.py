@@ -21,7 +21,7 @@ def add_handle(handle, watcher):
         with open(file_path, "w+", encoding="utf-8") as f:
             json.dump({"handles": user,
                        str(watcher): [handle]}, f, ensure_ascii=False, indent=4)
-        return "Handles added successfully"
+        return "Handle added successfully"
 
     with open(file_path, "r+", encoding='utf-8') as f:
         data = json.load(f)
@@ -36,6 +36,8 @@ def add_handle(handle, watcher):
             if handle not in watcher_list:
                 watcher_list.append(handle)
                 data[str(watcher)] = watcher_list
+            else:
+                return "Handle already added"
         except KeyError:
             data[str(watcher)] = [handle]
 
@@ -44,4 +46,4 @@ def add_handle(handle, watcher):
 
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-        return "Handles added successfully"
+        return "Handle added successfully"

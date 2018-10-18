@@ -128,15 +128,5 @@
         "durationSeconds": 172800,
         "startTimeSeconds": 1539932700,
         "relativeTimeSeconds": -184555
-    },
-    {
-        "id": 1054,
-        "name": "Mail.Ru Cup 2018 Round 1",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 9000,
-        "startTimeSeconds": 1539880500,
-        "relativeTimeSeconds": -132357
     }
 ]
