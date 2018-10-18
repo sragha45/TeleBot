@@ -70,6 +70,7 @@ class Bot:
         res = "Updating contest list... Please wait"
         bot.send_message(chat_id=update.message.chat_id, text=res)
 
-    def add_handles(self, bot, update, args):
-        res = hh.add_handle(args[0])
+    @staticmethod
+    def add_handles(bot, update, args):
+        res = hh.add_handle(args[0], update.effective_user.id)
         update.message.reply_text(res)

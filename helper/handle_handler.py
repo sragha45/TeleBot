@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 
 
-def add_handle(handle):
+def add_handle(handle, watcher):
     url = "https://codeforces.com/api/user.info?handles=" + handle
     file_path = Path("helper/cf_handles.json")
 
@@ -19,20 +19,29 @@ def add_handle(handle):
 
     if not os.path.isfile(file_path):
         with open(file_path, "w+", encoding="utf-8") as f:
-            json.dump(user, f, ensure_ascii=False, indent=4)
+            json.dump({"handles": user,
+                       str(watcher): [handle]}, f, ensure_ascii=False, indent=4)
         return "Handles added successfully"
 
     with open(file_path, "r+", encoding='utf-8') as f:
-        handle_list = json.load(f)
-        for h in handle_list:
-            if handle == h['handle']:
-                return "Handles already added"
+        data = json.load(f)
+        handle_list = data["handles"]
 
-        handle_list.append(user[0])
+        if handle.lower() not in [x['handle'].lower() for x in handle_list]:
+            handle_list.append(user[0])
+            data["handles"] = handle_list
+
+        try:
+            watcher_list = data[str(watcher)]
+            if handle not in watcher_list:
+                watcher_list.append(handle)
+                data[str(watcher)] = watcher_list
+        except KeyError:
+            data[str(watcher)] = [handle]
+
         f.seek(0)
         f.truncate()
-        json.dump(handle_list, f, ensure_ascii=False, indent=4)
+
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
         return "Handles added successfully"
-
-

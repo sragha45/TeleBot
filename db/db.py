@@ -27,3 +27,4 @@ def get_users_list():
             return d["users"]
     except FileNotFoundError:
         return []
+
