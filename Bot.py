@@ -1,5 +1,6 @@
 from telegram.ext import Updater, CommandHandler
 import helper.codeforces as cg
+import helper.handle_handler as hh
 import logging
 from db import db
 
@@ -13,11 +14,12 @@ class Bot:
         update.message.reply_text("I'm Alexa!")
         db.add_user(update.effective_user)
 
-    def add_handles(self):
+    def add_handlers(self):
         self.dispatcher.add_handler(CommandHandler('start', self.start_bot))
         self.dispatcher.add_handler(CommandHandler('upcoming', self.upcoming))
         self.dispatcher.add_handler(CommandHandler('running', self.running))
         self.dispatcher.add_handler(CommandHandler('refresh', self.refresh))
+        self.dispatcher.add_handler(CommandHandler('add_handles', self.add_handles, pass_args=True))
 
     def __init__(self):
         self.TOKEN = "631877927:AAGJAVZo_GBz7Gmpq0HWOB8su-kK1i_CsLI"
@@ -25,13 +27,13 @@ class Bot:
         self.updater = Updater(token=self.TOKEN)
         self.dispatcher = self.updater.dispatcher
 
-        # Create a cron job that runs fetches the updates daily at 3:00 AM
+        # Create a cron job that fetches the updates daily at 3:00 AM
         self.job_queue = self.updater.job_queue
         # self.job_daily_update = self.job_queue.run_daily(self._3am_update_callback,
         #                                                  time(hour=3, minute=0, second=0, microsecond=0))
         # self.job_daily_update = self.job_queue.run_once(self._3am_update_callback, datetime.now())
         self._3am_update_callback()
-        self.add_handles()
+        self.add_handlers()
         self.updater.start_polling()
 
     def add_alarms(self):
@@ -67,3 +69,7 @@ class Bot:
         cg.write_codeforces_contest_list()
         res = "Updating contest list... Please wait"
         bot.send_message(chat_id=update.message.chat_id, text=res)
+
+    def add_handles(self, bot, update, args):
+        res = hh.add_handle(args[0])
+        update.message.reply_text(res)
