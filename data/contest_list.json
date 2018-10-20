@@ -140,13 +140,13 @@
         "relativeTimeSeconds": -76610
     },
     {
-        "id": 9999,
+        "id": 1041,
         "name": "Test contest",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
-        "durationSeconds": 40,
-        "startTimeSeconds": 1540058115,
+        "durationSeconds": 10,
+        "startTimeSeconds": 1540060163,
         "relativeTimeSeconds": -76610
     }
 ]
