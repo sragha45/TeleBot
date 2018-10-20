@@ -7,7 +7,17 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1543163700,
-        "relativeTimeSeconds": -3415557
+        "relativeTimeSeconds": -3131210
+    },
+    {
+        "id": 1061,
+        "name": "Codeforces Round #TBA (div. 2)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1542900900,
+        "relativeTimeSeconds": -2868410
     },
     {
         "id": 1032,
@@ -17,7 +27,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542557100,
-        "relativeTimeSeconds": -2808957
+        "relativeTimeSeconds": -2524610
     },
     {
         "id": 1050,
@@ -27,17 +37,17 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1542380700,
-        "relativeTimeSeconds": -2632555
+        "relativeTimeSeconds": -2348210
     },
     {
         "id": 1062,
-        "name": "Codeforces Round #519 (div. 2)",
+        "name": "Codeforces Round #520 (div. 2)",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542209700,
-        "relativeTimeSeconds": -2461557
+        "relativeTimeSeconds": -2177210
     },
     {
         "id": 1055,
@@ -47,7 +57,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1541860500,
-        "relativeTimeSeconds": -2112357
+        "relativeTimeSeconds": -1828010
     },
     {
         "id": 1044,
@@ -57,47 +67,47 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1541354700,
-        "relativeTimeSeconds": -1606557
+        "relativeTimeSeconds": -1322210
     },
     {
         "id": 1043,
-        "name": "Codeforces Round #518 (Div. 1)",
+        "name": "Codeforces Round #519 by Botan Investments (Div. 1)",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -992757
+        "relativeTimeSeconds": -708410
     },
     {
         "id": 1069,
-        "name": "Codeforces Round #518 (Div. 2)",
+        "name": "Codeforces Round #519 by Botan Investments (Div. 2)",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -992757
+        "relativeTimeSeconds": -708410
     },
     {
         "id": 1067,
-        "name": "Codeforces Round #517 (Div. 1) [Thanks, Mail.Ru!]",
+        "name": "Codeforces Round #518 (Div. 1) [Thanks, Mail.Ru!]",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -564357
+        "relativeTimeSeconds": -280010
     },
     {
         "id": 1068,
-        "name": "Codeforces Round #517 (Div. 2) [Thanks, Mail.Ru!]",
+        "name": "Codeforces Round #518 (Div. 2) [Thanks, Mail.Ru!]",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -564357
+        "relativeTimeSeconds": -280010
     },
     {
         "id": 1031,
@@ -107,26 +117,26 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -360957
+        "relativeTimeSeconds": -76610
     },
     {
-        "id": 1070,
-        "name": "2018-2019 ICPC, NEERC, Southern Subregional Contest (Online Mirror, ACM-ICPC Rules, Teams Preferred)",
-        "type": "ICPC",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 18000,
-        "startTimeSeconds": 1540022700,
-        "relativeTimeSeconds": -274557
-    },
-    {
-        "id": 1049,
-        "name": "Технокубок 2019 - Ознакомительный Раунд 2",
+        "id": 1071,
+        "name": "Codeforces Round #517 (Div. 1, based on Technocup 2019 Elimination Round 2)",
         "type": "CF",
         "phase": "BEFORE",
         "frozen": false,
-        "durationSeconds": 172800,
-        "startTimeSeconds": 1539932700,
-        "relativeTimeSeconds": -184555
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1540109100,
+        "relativeTimeSeconds": -76610
+    },
+    {
+        "id": 1072,
+        "name": "Codeforces Round #517 (Div. 2, based on Technocup 2019 Elimination Round 2)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1540109100,
+        "relativeTimeSeconds": -76610
     }
 ]

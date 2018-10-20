@@ -1,6 +1,7 @@
 from telegram.ext import Updater, CommandHandler
 import helper.codeforces as cg
 import helper.handle_handler as hh
+from datetime import datetime
 import logging
 from db import db
 
@@ -38,14 +39,20 @@ class Bot:
         self.updater.start_polling()
 
     def add_alarms(self):
-        contest_list = cg.get_contest_time_and_id()
         jobs = [x.name for x in self.job_queue.jobs()]
+        contest_list = cg.get_contest_time_and_id()
         for x in contest_list:
-            if x[1] not in jobs:
-                self.job_queue.run_once(self.alarm, when=x[0], context=x[1], name=x[1])
+            if x["id"] not in jobs:
+                self.job_queue.run_once(self.alarm, when=x["date"],
+                                        context=x["id"], name=x["id"])
+
+                self.job_queue.run_once(cg.contest_finished, when=x["end_time"],
+                                        context={"job_queue": self.job_queue,
+                                                 "id": x["id"],
+                                                 "datetime": x["end_time"]}, name=str(x["id"]) + "_end")
 
     def _3am_update_callback(self, bot=None, job=None):
-        # cg.write_codeforces_contest_list()
+        cg.write_codeforces_contest_list()
         self.add_alarms()
 
     @staticmethod
@@ -80,3 +87,10 @@ class Bot:
     def get_rating_of(bot, update, args):
         res = hh.get_rating_of(args[0])
         update.message.reply_text(res)
+
+
+# TODO: 1) Add contest finish callback and schedule a 30s callback to get the results
+# TODO: 2) Get the standings of the contests
+# TODO: 3) Message all the interested users => How to do that?
+# TODO:     .. One method is to take the intersection of the result and the cf_handles.json (Think about it)
+
