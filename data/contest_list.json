@@ -138,5 +138,15 @@
         "durationSeconds": 7200,
         "startTimeSeconds": 1540109100,
         "relativeTimeSeconds": -76610
+    },
+    {
+        "id": 9999,
+        "name": "Test contest",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 40,
+        "startTimeSeconds": 1540058115,
+        "relativeTimeSeconds": -76610
     }
 ]

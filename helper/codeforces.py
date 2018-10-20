@@ -3,6 +3,12 @@ import json
 from datetime import datetime, timedelta
 from telegram.ext.jobqueue import JobQueue
 import os
+import logging
+
+
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
+
 
 path = "data/contest_list.json"
 api_url = "http://codeforces.com/api/contest.list"
@@ -77,6 +83,9 @@ def get_running_contests():
 
 
 def did_contest_really_end(contest_id):
+
+    logging.info("Entering now!")
+
     url = "https://codeforces.com/api/contest.ratingChanges?contestId=" + str(contest_id)
     with open("helper/cf_handles.json", "r+", encoding='utf-8') as f:
         tracking_handles = json.load(f)["handles"]
@@ -102,21 +111,33 @@ def contest_finished(bot=None, job=None):
     contest_id: str = context["id"]
     first_time = context["datetime"]
 
-    contest_result, contest_result_handles = did_contest_really_end(contest_id)
+    # Really trashy code. Fix this later.
+    contest_result, contest_result_handles = (None, None)
+    try:
+        contest_result, contest_result_handles = did_contest_really_end(contest_id)
+    except TypeError:
+        contest_result = False
 
-    if not did_contest_really_end(contest_result):
-        if first_time < first_time + timedelta(hours=3):
+    if not contest_result:
+        print(first_time)
+        if datetime.now() > first_time + timedelta(minutes=1):
             job_queue.run_once(contest_finished,
                                when=datetime.now() + timedelta(seconds=30),
                                context=context)
-
+        else:
+            with open("helper/cf_handles.json", "r+", encoding='utf-8') as f:
+                data = json.load(f)
+                users = [x for x in data.keys() if x != "handles"]
+                for user in users:
+                    bot.send_message(chat_id=user,
+                                     text="Cannot retrieve details for contest: " + str(contest_id))
     else:
         with open("helper/cf_handles.json", "r+", encoding='utf-8') as f:
             data = json.load(f)
             users = [x for x in data.keys() if x != "handles"]
 
         for user in users:
-            for handle in user:
+            for handle in data[user]:
                 if handle in contest_result_handles:
                     bot.send_message(chat_id=user,
                                      text=handle)
