@@ -20,6 +20,7 @@ class Bot:
         self.dispatcher.add_handler(CommandHandler('running', self.running))
         self.dispatcher.add_handler(CommandHandler('refresh', self.refresh))
         self.dispatcher.add_handler(CommandHandler('add_handles', self.add_handles, pass_args=True))
+        self.dispatcher.add_handler(CommandHandler('rating_of', self.get_rating_of, pass_args=True))
 
     def __init__(self):
         self.TOKEN = "631877927:AAGJAVZo_GBz7Gmpq0HWOB8su-kK1i_CsLI"
@@ -73,4 +74,9 @@ class Bot:
     @staticmethod
     def add_handles(bot, update, args):
         res = hh.add_handle(args[0], update.effective_user.id)
+        update.message.reply_text(res)
+
+    @staticmethod
+    def get_rating_of(bot, update, args):
+        res = hh.get_rating_of(args[0])
         update.message.reply_text(res)

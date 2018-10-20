@@ -47,3 +47,16 @@ def add_handle(handle, watcher):
         json.dump(data, f, ensure_ascii=False, indent=4)
 
         return "Handle added successfully"
+
+
+def get_rating_of(handle):
+    url = "https://codeforces.com/api/user.rating?handle=" + handle
+    try:
+        response = urllib.request.urlopen(url).read()
+        response = json.loads(response)
+        response = response["result"]
+        if not response:
+            return "User has not participated in any contests yet"
+        return response[-1]["newRating"]
+    except urllib.request.HTTPError:
+        return "Handle not found"
