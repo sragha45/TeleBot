@@ -5,7 +5,7 @@ import helper
 from db import db
 import json
 
-# from datetime import datetime, time
+from datetime import datetime, time
 
 
 class Bot:
@@ -30,9 +30,8 @@ class Bot:
 
         # Create a cron job that fetches the updates daily at 3:00 AM
         self.job_queue = self.updater.job_queue
-        # self.job_daily_update = self.job_queue.run_daily(self._3am_update_callback,
-        #                                                  time(hour=3, minute=0, second=0, microsecond=0))
-        # self.job_daily_update = self.job_queue.run_once(self._3am_update_callback, datetime.now())
+        self.job_daily_update = self.job_queue.run_daily(self._3am_update_callback,
+                                                         time=time(hour=3, minute=0, second=0, microsecond=0))
         self._3am_update_callback()
         self.add_handlers()
         self.updater.start_polling()
