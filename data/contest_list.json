@@ -7,7 +7,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1543163700,
-        "relativeTimeSeconds": -3131210
+        "relativeTimeSeconds": -3118699
     },
     {
         "id": 1061,
@@ -17,7 +17,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542900900,
-        "relativeTimeSeconds": -2868410
+        "relativeTimeSeconds": -2855899
     },
     {
         "id": 1032,
@@ -27,7 +27,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542557100,
-        "relativeTimeSeconds": -2524610
+        "relativeTimeSeconds": -2512099
     },
     {
         "id": 1050,
@@ -37,7 +37,7 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1542380700,
-        "relativeTimeSeconds": -2348210
+        "relativeTimeSeconds": -2335699
     },
     {
         "id": 1062,
@@ -47,7 +47,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542209700,
-        "relativeTimeSeconds": -2177210
+        "relativeTimeSeconds": -2164699
     },
     {
         "id": 1055,
@@ -57,7 +57,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1541860500,
-        "relativeTimeSeconds": -1828010
+        "relativeTimeSeconds": -1815499
     },
     {
         "id": 1044,
@@ -67,7 +67,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1541354700,
-        "relativeTimeSeconds": -1322210
+        "relativeTimeSeconds": -1309699
     },
     {
         "id": 1043,
@@ -77,7 +77,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -708410
+        "relativeTimeSeconds": -695899
     },
     {
         "id": 1069,
@@ -87,7 +87,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -708410
+        "relativeTimeSeconds": -695899
     },
     {
         "id": 1067,
@@ -97,7 +97,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -280010
+        "relativeTimeSeconds": -267499
     },
     {
         "id": 1068,
@@ -107,7 +107,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -280010
+        "relativeTimeSeconds": -267499
     },
     {
         "id": 1031,
@@ -117,7 +117,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -76610
+        "relativeTimeSeconds": -64099
     },
     {
         "id": 1071,
@@ -127,7 +127,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -76610
+        "relativeTimeSeconds": -64099
     },
     {
         "id": 1072,
@@ -137,16 +137,6 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -76610
-    },
-    {
-        "id": 1041,
-        "name": "Test contest",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 10,
-        "startTimeSeconds": 1540060163,
-        "relativeTimeSeconds": -76610
+        "relativeTimeSeconds": -64099
     }
 ]

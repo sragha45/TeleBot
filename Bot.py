@@ -1,10 +1,9 @@
 from telegram.ext import Updater, CommandHandler
 import helper.codeforces as cg
 import helper.handle_handler as hh
-from datetime import datetime
-import logging
+import helper
 from db import db
-
+import json
 
 # from datetime import datetime, time
 
@@ -24,7 +23,7 @@ class Bot:
         self.dispatcher.add_handler(CommandHandler('rating_of', self.get_rating_of, pass_args=True))
 
     def __init__(self):
-        self.TOKEN = "631877927:AAGJAVZo_GBz7Gmpq0HWOB8su-kK1i_CsLI"
+        self.TOKEN = helper.get_json_token()
 
         self.updater = Updater(token=self.TOKEN)
         self.dispatcher = self.updater.dispatcher
@@ -52,7 +51,7 @@ class Bot:
                                                  "datetime": x["end_time"]}, name=str(x["id"]) + "_end")
 
     def _3am_update_callback(self, bot=None, job=None):
-        # cg.write_codeforces_contest_list()
+        cg.write_codeforces_contest_list()
         self.add_alarms()
 
     @staticmethod

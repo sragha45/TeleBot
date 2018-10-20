@@ -1,7 +1,10 @@
 import urllib.request
 import json
+import logging
 from pathlib import Path
 import os
+
+logger = logging.getLogger("TeleBot")
 
 
 def add_handle(handle, watcher):

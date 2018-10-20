@@ -6,10 +6,6 @@ import os
 import logging
 
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
-
-
 path = "data/contest_list.json"
 api_url = "http://codeforces.com/api/contest.list"
 
