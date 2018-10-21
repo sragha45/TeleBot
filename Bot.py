@@ -5,7 +5,7 @@ import helper
 from db import db
 import json
 
-from datetime import datetime, time
+from datetime import datetime, timedelta
 
 
 class Bot:
@@ -41,7 +41,7 @@ class Bot:
         contest_list = cg.get_contest_time_and_id()
         for x in contest_list:
             if x["id"] not in jobs:
-                self.job_queue.run_once(self.alarm, when=x["date"],
+                self.job_queue.run_once(self.alarm, when=x["date"] - timedelta(hours=1),
                                         context=x["id"], name=x["id"])
 
                 self.job_queue.run_once(cg.contest_finished, when=x["end_time"],
@@ -55,7 +55,7 @@ class Bot:
 
     @staticmethod
     def alarm(bot, job):
-        message = str(job.context) + " is starting now!"
+        message = str(job.context) + " is going to start in 1 hour!"
         people = db.get_users_list()
         for person in people:
             bot.send_message(chat_id=person, text=message)
@@ -85,10 +85,4 @@ class Bot:
     def get_rating_of(bot, update, args):
         res = hh.get_rating_of(args[0])
         update.message.reply_text(res)
-
-
-# TODO: 1) Add contest finish callback and schedule a 30s callback to get the results
-# TODO: 2) Get the standings of the contests
-# TODO: 3) Message all the interested users => How to do that?
-# TODO:     .. One method is to take the intersection of the result and the cf_handles.json (Think about it)
 

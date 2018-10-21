@@ -117,8 +117,8 @@ def contest_finished(bot=None, job=None):
     contest_result = did_contest_really_end(contest_id)
 
     if contest_result is False:
-        # Change the delta later as per the need
-        if datetime.now() < first_time + timedelta(minutes=1):
+        # Check if the result has been released for 1 day. If not, abort.
+        if datetime.now() < first_time + timedelta(days=1):
             job_queue.run_once(contest_finished,
                                when=datetime.now() + timedelta(seconds=30),
                                context=context)
