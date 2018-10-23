@@ -3,9 +3,7 @@ import helper.codeforces as cg
 import helper.handle_handler as hh
 import helper
 from db import db
-import json
-
-from datetime import datetime, time, timedelta
+from datetime import time, timedelta
 
 
 class Bot:
@@ -19,9 +17,10 @@ class Bot:
         self.dispatcher.add_handler(CommandHandler('upcoming', self.upcoming))
         self.dispatcher.add_handler(CommandHandler('running', self.running))
         self.dispatcher.add_handler(CommandHandler('refresh', self.refresh))
-        self.dispatcher.add_handler(CommandHandler('add_handles', self.add_handles, pass_args=True))
+        self.dispatcher.add_handler(CommandHandler('add_handle', self.add_handle, pass_args=True))
         self.dispatcher.add_handler(CommandHandler('rating_of', self.get_rating_of, pass_args=True))
         self.dispatcher.add_handler(CommandHandler('list_handles', self.list_handles))
+        self.dispatcher.add_handler(CommandHandler('rem_handle', self.rem_handle, pass_args=True))
 
     def __init__(self):
         self.TOKEN = helper.get_json_token()
@@ -78,7 +77,7 @@ class Bot:
         bot.send_message(chat_id=update.message.chat_id, text=res)
 
     @staticmethod
-    def add_handles(bot, update, args):
+    def add_handle(bot, update, args):
         res = hh.add_handle(args[0], update.effective_user.id)
         update.message.reply_text(res)
 
@@ -90,4 +89,9 @@ class Bot:
     @staticmethod
     def list_handles(bot, update):
         res = hh.get_handle_list(str(update.effective_user.id))
+        update.message.reply_text(res)
+
+    @staticmethod
+    def rem_handle(bot, update, args):
+        res = hh.remove_handle(args[0], str(update.effective_user.id))
         update.message.reply_text(res)

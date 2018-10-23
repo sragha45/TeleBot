@@ -71,5 +71,20 @@ def get_handle_list(user_id):
         res = ""
         for handle in handle_list[user_id]:
             res += handle + "\n"
-        res += "To remove any handle(s) do '/rem_handles'" + "\n"
+        res += "To remove handle do '/rem_handle'" + "\n"
         return res
+
+
+def remove_handle(handle, user_id):
+    with open("helper/cf_handles.json", "r+", encoding='utf-8') as f:
+        data = json.load(f)
+        if handle in data[user_id]:
+            data[user_id].remove(handle)
+            res = "Handle has been deleted successfully"
+        else:
+            res = "You haven't been following this handle"
+        f.seek(0)
+        f.truncate()
+
+        json.dump(data, f, indent=4)
+    return res
