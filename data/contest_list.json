@@ -7,7 +7,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1543163700,
-        "relativeTimeSeconds": -3118487
+        "relativeTimeSeconds": -2855413
     },
     {
         "id": 1061,
@@ -17,7 +17,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542900900,
-        "relativeTimeSeconds": -2855687
+        "relativeTimeSeconds": -2592613
     },
     {
         "id": 1032,
@@ -27,7 +27,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542557100,
-        "relativeTimeSeconds": -2511887
+        "relativeTimeSeconds": -2248813
     },
     {
         "id": 1050,
@@ -37,7 +37,7 @@
         "frozen": false,
         "durationSeconds": 172800,
         "startTimeSeconds": 1542380700,
-        "relativeTimeSeconds": -2335487
+        "relativeTimeSeconds": -2072413
     },
     {
         "id": 1062,
@@ -47,7 +47,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1542209700,
-        "relativeTimeSeconds": -2164487
+        "relativeTimeSeconds": -1901413
     },
     {
         "id": 1055,
@@ -57,7 +57,7 @@
         "frozen": false,
         "durationSeconds": 9000,
         "startTimeSeconds": 1541860500,
-        "relativeTimeSeconds": -1815287
+        "relativeTimeSeconds": -1552213
     },
     {
         "id": 1044,
@@ -67,7 +67,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1541354700,
-        "relativeTimeSeconds": -1309487
+        "relativeTimeSeconds": -1046413
     },
     {
         "id": 1043,
@@ -77,7 +77,7 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -695687
+        "relativeTimeSeconds": -432613
     },
     {
         "id": 1069,
@@ -87,7 +87,17 @@
         "frozen": false,
         "durationSeconds": 7200,
         "startTimeSeconds": 1540740900,
-        "relativeTimeSeconds": -695687
+        "relativeTimeSeconds": -432613
+    },
+    {
+        "id": 1073,
+        "name": "Educational Codeforces Round 53 (Rated for Div. 2)",
+        "type": "ICPC",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 7200,
+        "startTimeSeconds": 1540478100,
+        "relativeTimeSeconds": -169813
     },
     {
         "id": 1067,
@@ -96,8 +106,8 @@
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
-        "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -267287
+        "startTimeSeconds": 1540398900,
+        "relativeTimeSeconds": -90613
     },
     {
         "id": 1068,
@@ -106,37 +116,7 @@
         "phase": "BEFORE",
         "frozen": false,
         "durationSeconds": 7200,
-        "startTimeSeconds": 1540312500,
-        "relativeTimeSeconds": -267287
-    },
-    {
-        "id": 1031,
-        "name": "Technocup 2019 - Elimination Round 2",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 7200,
-        "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -63887
-    },
-    {
-        "id": 1071,
-        "name": "Codeforces Round #517 (Div. 1, based on Technocup 2019 Elimination Round 2)",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 7200,
-        "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -63887
-    },
-    {
-        "id": 1072,
-        "name": "Codeforces Round #517 (Div. 2, based on Technocup 2019 Elimination Round 2)",
-        "type": "CF",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 7200,
-        "startTimeSeconds": 1540109100,
-        "relativeTimeSeconds": -63887
+        "startTimeSeconds": 1540398900,
+        "relativeTimeSeconds": -90613
     }
 ]

@@ -5,7 +5,7 @@ import helper
 from db import db
 import json
 
-from datetime import datetime, timedelta
+from datetime import datetime, time, timedelta
 
 
 class Bot:
@@ -21,6 +21,7 @@ class Bot:
         self.dispatcher.add_handler(CommandHandler('refresh', self.refresh))
         self.dispatcher.add_handler(CommandHandler('add_handles', self.add_handles, pass_args=True))
         self.dispatcher.add_handler(CommandHandler('rating_of', self.get_rating_of, pass_args=True))
+        self.dispatcher.add_handler(CommandHandler('list_handles', self.list_handles))
 
     def __init__(self):
         self.TOKEN = helper.get_json_token()
@@ -86,3 +87,8 @@ class Bot:
         res = hh.get_rating_of(args[0])
         update.message.reply_text(res)
 
+    @staticmethod
+    def list_handles(bot, update):
+        res = hh.get_handle_list(str(update.effective_user.id))
+
+        update.message.reply_text(res)

@@ -63,3 +63,13 @@ def get_rating_of(handle):
         return response[-1]["newRating"]
     except urllib.request.HTTPError:
         return "Handle not found"
+
+
+def get_handle_list(user_id):
+    with open("helper/cf_handles.json", "r+", encoding='utf-8') as f:
+        handle_list = json.load(f)
+        res = ""
+        for handle in handle_list[user_id]:
+            res += handle + "\n"
+        res += "To remove any handle(s) do '/rem_handles'" + "\n"
+        return res
