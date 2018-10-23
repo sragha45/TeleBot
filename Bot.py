@@ -90,5 +90,4 @@ class Bot:
     @staticmethod
     def list_handles(bot, update):
         res = hh.get_handle_list(str(update.effective_user.id))
-
         update.message.reply_text(res)
