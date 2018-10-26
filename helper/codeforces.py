@@ -6,7 +6,7 @@ import os
 import logging
 
 
-path = "data/contest_list.json"
+path = os.path.join(os.path.dirname(__file__), "contest_list.json")
 api_url = "http://codeforces.com/api/contest.list"
 
 
@@ -78,6 +78,9 @@ def get_running_contests():
     return res
 
 
+cf_handle_file_path = os.path.join(os.path.dirname(__file__), "cf_handles.json")
+
+
 def did_contest_really_end(contest_id):
 
     logging.info("Entering now!")
@@ -85,7 +88,7 @@ def did_contest_really_end(contest_id):
     url = "https://codeforces.com/api/contest.ratingChanges?contestId=" + str(contest_id)
 
     try:
-        with open("helper/cf_handles.json", "r+", encoding='utf-8') as f:
+        with open(cf_handle_file_path, "r+", encoding='utf-8') as f:
             tracking_handles = json.load(f)["handles"]
             tracking_handles = [x["handle"] for x in tracking_handles]
 
@@ -102,7 +105,7 @@ def did_contest_really_end(contest_id):
 
 
 def get_user_data():
-    with open("helper/cf_handles.json", "r+", encoding='utf-8') as f:
+    with open(cf_handle_file_path, "r+", encoding='utf-8') as f:
         data = json.load(f)
         users = [x for x in data.keys() if x != "handles"]
     return data, users

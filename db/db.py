@@ -1,10 +1,12 @@
 import json
 from pathlib import Path
+import os
 
-path = Path("db/users_info.json")
+path = Path(os.path.join(os.path.dirname(__file__), "users_info.json"))
 
 
 def add_user(user):
+    print(path)
     user = user.id
     if path.is_file():
         with open(path, "r+", encoding='utf-8') as f:
