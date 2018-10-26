@@ -2,7 +2,6 @@ from telegram.ext import Updater, CommandHandler
 import helper.codeforces as cg
 import helper.handle_handler as hh
 import helper
-import os
 from db import db
 from datetime import time, timedelta
 
@@ -37,7 +36,7 @@ class Bot:
         Starting point of Bot. Connects to the bot and schedules the necessary daemons
         :return: void
         """
-        self.TOKEN = os.environ["TELEGRAM_TOKEN"]
+        self.TOKEN = helper.get_json_token()
 
         self.updater = Updater(token=self.TOKEN)
         self.dispatcher = self.updater.dispatcher
