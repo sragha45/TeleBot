@@ -30,6 +30,9 @@ class Bot:
         self.dispatcher.add_handler(CommandHandler('rating_of', self.get_rating_of, pass_args=True))
         self.dispatcher.add_handler(CommandHandler('list_handles', self.list_handles))
         self.dispatcher.add_handler(CommandHandler('rem_handle', self.rem_handle, pass_args=True))
+    #
+    # def testing(self):
+    #     print(cg.did_contest_really_end(1077))
 
     def __init__(self):
         """
@@ -51,6 +54,8 @@ class Bot:
         # Continuously polls for the updates on the Telegram
         self.updater.start_polling()
 
+        # self.testing()
+
     def add_alarms(self):
         """
         For each contest, schedule two jobs. One alerts for the upcoming contest,
@@ -61,6 +66,7 @@ class Bot:
         contest_list = cg.get_contest_time_and_id()
         for x in contest_list:
             if x["id"] not in jobs:
+                # print("Adding: " + str(x["id"]))
                 self.job_queue.run_once(self.alarm, when=x["date"] - timedelta(hours=1),
                                         context=x["id"], name=x["id"])
 
@@ -76,7 +82,7 @@ class Bot:
         :param job:
         :return: void
         """
-        cg.write_codeforces_contest_list()
+        # cg.write_codeforces_contest_list()
         self.add_alarms()
 
     @staticmethod
@@ -138,8 +144,11 @@ class Bot:
                      args[0] should contain the desired handle
         :return:
         """
-        res = hh.add_handle(args[0], update.effective_user.id)
-        update.message.reply_text(res)
+        if len(args) != 1:
+            update.message.reply_text("The format is /add_handle handle_name")
+        else:
+            res = hh.add_handle(args[0], update.effective_user.id)
+            update.message.reply_text(res)
 
     @staticmethod
     def get_rating_of(bot, update, args):

@@ -71,6 +71,8 @@ def get_handle_list(user_id):
         res = ""
         for handle in handle_list[user_id]:
             res += handle + "\n"
+        if res == "":
+            return "You are not following any handles"
         res += "To remove handle do '/rem_handle'" + "\n"
         return res
 

@@ -6,7 +6,7 @@ import os
 import logging
 
 
-path = os.path.join(os.path.dirname(__file__), "contest_list.json")
+file_path = os.path.join(os.path.dirname(__file__), "contest_list.json")
 api_url = "http://codeforces.com/api/contest.list"
 
 
@@ -16,10 +16,10 @@ def write_codeforces_contest_list():
     :return: void
     """
 
-    if not os.path.exists(os.path.dirname(path)):
-        os.makedirs(os.path.dirname(path))
+    if not os.path.exists(os.path.dirname(file_path)):
+        os.makedirs(os.path.dirname(file_path))
 
-    with open(path, "w+", encoding='utf-8') as f:
+    with open(file_path, "w+", encoding='utf-8') as f:
         response = urllib.request.urlopen(api_url).read()
         json_response = json.loads(response)
         upcoming_contests = [x for x in json_response["result"] if x["phase"] == "BEFORE" or
@@ -29,7 +29,7 @@ def write_codeforces_contest_list():
 
 def get_contest_time_and_id():
     contests = []
-    with open(path, "r", encoding='utf-8') as f:
+    with open(file_path, "r", encoding='utf-8') as f:
         contest_list = json.load(f)
         for x in contest_list:
             date = datetime.utcfromtimestamp((x["startTimeSeconds"]))
@@ -38,14 +38,13 @@ def get_contest_time_and_id():
             contests.append({"date": date,
                              "id": id,
                              "end_time": end_time})
-
     return contests
 
 
 def get_upcoming_contests():
     write_codeforces_contest_list()
     res = ""
-    with open(path, "r", encoding='utf-8') as f:
+    with open(file_path, "r", encoding='utf-8') as f:
         contests = json.load(f)
         contests = [x for x in contests if x["phase"] == "BEFORE"]
         contests.sort(key=lambda contest: -contest["relativeTimeSeconds"])
@@ -64,7 +63,7 @@ def get_upcoming_contests():
 def get_running_contests():
     # write_codeforces_contest_list()
     res = ""
-    with open(path, "r", encoding='utf-8') as f:
+    with open(file_path, "r", encoding='utf-8') as f:
         contests = json.load(f)
         contests = [x for x in contests if x["phase"] == "RUNNING"]
         for contest in contests:
@@ -79,12 +78,16 @@ def get_running_contests():
 
 
 cf_handle_file_path = os.path.join(os.path.dirname(__file__), "cf_handles.json")
+count = 0
 
 
 def did_contest_really_end(contest_id):
+    global count
+    count += 1
+    if count < 4:
+        return False
 
-    logging.info("Entering now!")
-
+    print("Entering GET API")
     url = "https://codeforces.com/api/contest.ratingChanges?contestId=" + str(contest_id)
 
     try:
@@ -119,22 +122,27 @@ def contest_finished(bot=None, job=None):
 
     contest_result = did_contest_really_end(contest_id)
 
+    print(first_time, datetime.now(), end=' ')
+
     if contest_result is False:
-        # Check if the result has been released for 1 day. If not, abort.
-        if datetime.now() < first_time + timedelta(days=1):
+        # Keep checking if the result has been released for 1 day. If not, abort.
+        if datetime.now() < first_time + timedelta(seconds=20):
             job_queue.run_once(contest_finished,
-                               when=datetime.now() + timedelta(seconds=30),
+                               when=datetime.now() + timedelta(seconds=5),
                                context=context)
+            print(" New: " + str(datetime.now() + timedelta(seconds=5)))
         else:
+            print("Aborted")
             data, users = get_user_data()
             for user in users:
                 bot.send_message(chat_id=user,
                                  text="Cannot retrieve details for contest: " + str(contest_id))
     else:
+        print("Aborted 2")
         data, users = get_user_data()
         for x in contest_result:
             for user in users:
-                logging.info(json.dumps(x, indent=4))
+                # print(json.dumps(x, indent=4))
                 msg = "Profile: " + x["handle"] + "\n" \
                       + "Rating change = " + str(x["oldRating"]) + " \u2192 " + str(x["newRating"]) + " ( " \
                       + "{:+}".format(x["newRating"] - x["oldRating"]) + ")"

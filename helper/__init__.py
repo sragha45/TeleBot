@@ -1,5 +1,6 @@
 import json
 
+count = 0
 
 def get_json_token():
     with open("data/token.json", "r", encoding='utf-8') as f:
