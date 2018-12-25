@@ -86,16 +86,10 @@ def get_running_contests():
 
 
 cf_handle_file_path = os.path.join(os.path.dirname(__file__), "cf_handles.json")
-count = 0
 
 
 def did_contest_really_end(contest_id):
-    global count
-    count += 1
-    if count < 4:
-        return False
 
-    print("Entering GET API")
     url = "https://codeforces.com/api/contest.ratingChanges?contestId=" + str(contest_id)
 
     try:
