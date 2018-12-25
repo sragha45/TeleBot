@@ -66,7 +66,9 @@ class Bot:
         contest_list = cg.get_contest_time_and_id()
         for x in contest_list:
             if x["id"] not in jobs:
-                # print("Adding: " + str(x["id"]))
+                print("Adding: " + str(x["id"]) +
+                      "\nAt: " + str(x["date"]))
+
                 self.job_queue.run_once(self.alarm, when=x["date"] - timedelta(hours=1),
                                         context=x["id"], name=x["id"])
 
@@ -82,7 +84,7 @@ class Bot:
         :param job:
         :return: void
         """
-        # cg.write_codeforces_contest_list()
+        cg.write_codeforces_contest_list()
         self.add_alarms()
 
     @staticmethod

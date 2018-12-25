@@ -1,6 +1,7 @@
 import urllib.request
 import json
 from datetime import datetime, timedelta
+import time
 from telegram.ext.jobqueue import JobQueue
 import os
 import logging
@@ -27,12 +28,19 @@ def write_codeforces_contest_list():
         f.write(json.dumps(upcoming_contests, ensure_ascii=False, indent=4))
 
 
+def from_utc_to_local(date):
+    now = time.time()
+    offset = datetime.fromtimestamp(now) - datetime.utcfromtimestamp(now)
+    return date + offset
+
+
 def get_contest_time_and_id():
     contests = []
     with open(file_path, "r", encoding='utf-8') as f:
         contest_list = json.load(f)
         for x in contest_list:
             date = datetime.utcfromtimestamp((x["startTimeSeconds"]))
+            date = from_utc_to_local(date)
             id = x["id"]
             end_time = date + timedelta(seconds=x["durationSeconds"])
             contests.append({"date": date,
@@ -125,8 +133,8 @@ def contest_finished(bot=None, job=None):
     print(first_time, datetime.now(), end=' ')
 
     if contest_result is False:
-        # Keep checking if the result has been released for 1 day. If not, abort.
-        if datetime.now() < first_time + timedelta(seconds=20):
+        # Keep checking if the result has been released for 2 days. If not, abort.
+        if datetime.now() < first_time + timedelta(days=2):
             job_queue.run_once(contest_finished,
                                when=datetime.now() + timedelta(seconds=5),
                                context=context)
