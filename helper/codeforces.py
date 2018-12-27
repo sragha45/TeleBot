@@ -104,7 +104,7 @@ def did_contest_really_end(contest_id):
         for x in response:
             if x["handle"] in tracking_handles:
                 result.append(x)
-        return result
+        return False if result == [] else result
     except urllib.request.HTTPError:
         return False
 
